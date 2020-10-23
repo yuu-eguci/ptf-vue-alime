@@ -9,6 +9,11 @@ const routes = [
     name: 'HelloWorld',
     component: () => import('./components/HelloWorld.vue'),
   },
+  {
+    path: '/2',
+    name: 'HelloWorld2',
+    component: () => import('./components/HelloWorld2.vue'),
+  },
 ];
 
 const router = new Router({

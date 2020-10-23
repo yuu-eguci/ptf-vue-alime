@@ -2,10 +2,8 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-      <router-link to="/2">GO TO 2</router-link>
+      222222222222222222222222222222
+      <router-link to="/">GO TO 1</router-link>
     </p>
     <h3>Installed CLI Plugins</h3>
     <ul>
