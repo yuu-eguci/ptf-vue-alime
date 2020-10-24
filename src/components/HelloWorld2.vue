@@ -1,9 +1,9 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ $t('message') }}</h1>
     <p>
       222222222222222222222222222222
-      <router-link to="/">GO TO 1</router-link>
+      <router-link :to="`/${this.$i18n.locale}`">GO TO 1</router-link>
     </p>
     <h3>Installed CLI Plugins</h3>
     <ul>
