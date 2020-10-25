@@ -33,6 +33,36 @@ const routes = [
         name: 'HelloWorld2',
         component: () => import('./components/HelloWorld2.vue'),
       },
+      {
+        path: 'index',
+        name: 'AlimeIndex',
+        component: () => import('./components/AlimeIndex.vue'),
+      },
+      {
+        path: 'about',
+        name: 'AlimeAbout',
+        component: () => import('./components/AlimeAbout.vue'),
+      },
+      {
+        path: 'gallery',
+        name: 'AlimeGallery',
+        component: () => import('./components/AlimeGallery.vue'),
+      },
+      {
+        path: 'blog',
+        name: 'AlimeBlog',
+        component: () => import('./components/AlimeBlog.vue'),
+      },
+      {
+        path: 'single-blog',
+        name: 'AlimeSingleBlog',
+        component: () => import('./components/AlimeSingleBlog.vue'),
+      },
+      {
+        path: 'contact',
+        name: 'AlimeContact',
+        component: () => import('./components/AlimeContact.vue'),
+      },
     ]
   },
   // 想定外の URL は /en へリダイレクトします。 '/' とかね。

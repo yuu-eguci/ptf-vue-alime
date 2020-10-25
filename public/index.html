@@ -6,12 +6,31 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- Alime Stylesheet -->
+    <link rel="stylesheet" href="<%= BASE_URL %>alime/style.css">
   </head>
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+    <!-- /Preloader -->
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <!-- **** All JS Files ***** -->
+    <!-- jQuery 2.2.4 -->
+    <script src="<%= BASE_URL %>alime/js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="<%= BASE_URL %>alime/js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="<%= BASE_URL %>alime/js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="<%= BASE_URL %>alime/js/alime.bundle.js"></script>
+    <!-- Active -->
+    <!-- NOTE: DOM 登録は各 component で行わざるをえない。 -->
+    <!-- <script src="<%= BASE_URL %>alime/js/default-assets/active.js"></script> -->
   </body>
 </html>
