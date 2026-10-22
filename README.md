@@ -19,6 +19,8 @@ GitHub Pages で公開していて、URL の先頭 (`/en/...`) で言語を切�
 | Vue | 2.6.12 |
 | Vue CLI | 4.5 (webpack 4.47.0) |
 | ESLint | 6.8.0 (`plugin:vue/essential`) |
+| jQuery (public/alime) | 3.7.1 |
+| Bootstrap (public/alime) | 4.6.2 |
 | Playwright | 1.64.1 (E2E, desktop / mobile) |
 
 ## パッと実行してみたい
