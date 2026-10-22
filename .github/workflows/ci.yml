@@ -7,7 +7,7 @@ on:
       - master
 
 jobs:
-  lint-build:
+  lint-build-e2e:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v7
@@ -26,3 +26,17 @@ jobs:
 
     - name: Build
       run: yarn build
+
+    - name: Install Playwright browser
+      run: yarn playwright install --with-deps chromium
+
+    - name: E2E (desktop / mobile)
+      run: yarn test:e2e
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v7
+
+    - name: Build image
+      run: docker compose build
