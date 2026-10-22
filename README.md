@@ -1,14 +1,14 @@
 ptf-vue-alime
 ===
 
-ポートフォリオサイト用に、無料テンプレート [Alime](https://colorlib.com/wp/template/alime/) を Vue 2 (Vue CLI) へ移植したやつ。
+ポートフォリオサイト用に、無料テンプレート [Alime](https://colorlib.com/wp/template/alime/) を Vue (Vite) へ移植したやつ。
 GitHub Pages で公開していて、URL の先頭 (`/en/...`) で言語を切り替える。
 
 - Docker: 対応!
 - Node.js: 24.22.1 (LTS)
-- Linter: ESLint 6.8.0
+- Linter: ESLint 10.13.0
 - Test: Playwright 1.64.1
-- Vue: 2.6.12 / Vue CLI 4.5
+- Vue: 3.5.44 / Vite 8.3.5
 
 ## バージョン
 
@@ -16,9 +16,11 @@ GitHub Pages で公開していて、URL の先頭 (`/en/...`) で言語を切�
 | --- | --- |
 | Node.js | 24.22.1 (LTS, `.nvmrc`) |
 | Yarn | 1.22.22 |
-| Vue | 2.6.12 |
-| Vue CLI | 4.5 (webpack 4.47.0) |
-| ESLint | 6.8.0 (`plugin:vue/essential`) |
+| Vue | 3.5.44 (vue-router 5.4.0 / vue-i18n 11.4.16) |
+| Vite | 8.3.5 |
+| ESLint | 10.13.0 (`flat/essential`) |
+| jQuery (public/alime) | 3.7.1 |
+| Bootstrap (public/alime) | 4.6.2 |
 | Playwright | 1.64.1 (E2E, desktop / mobile) |
 
 ## パッと実行してみたい
@@ -55,11 +57,11 @@ yarn lint
 yarn playwright install chromium
 yarn test:e2e
 
-# i18n の未使用キーなどをチェック
-yarn i18n:report
+# 依存の脆弱性チェック
+yarn audit
 ```
 
-設定は [Configuration Reference](https://cli.vuejs.org/config/) を参照。
+設定は [Vite の Config](https://vite.dev/config/) を参照。
 
 ## デプロイ
 
