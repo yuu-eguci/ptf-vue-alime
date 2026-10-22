@@ -1,7 +1,12 @@
-# ptf-vue-alime
+ptf-vue-alime
+===
 
 ポートフォリオサイト用に、無料テンプレート [Alime](https://colorlib.com/wp/template/alime/) を Vue 2 (Vue CLI) へ移植したやつ。
 GitHub Pages で公開していて、URL の先頭 (`/en/...`) で言語を切り替える。
+
+- Node.js: 24.22.1 (LTS)
+- Linter: ESLint 6.8.0
+- Vue: 2.6.12 / Vue CLI 4.5
 
 ## バージョン
 
@@ -13,9 +18,10 @@ GitHub Pages で公開していて、URL の先頭 (`/en/...`) で言語を切�
 | Vue CLI | 4.5 (webpack 4.47.0) |
 | ESLint | 6.8.0 (`plugin:vue/essential`) |
 
-## Quick start
+## パッと実行してみたい
 
-Node.js は `.nvmrc` のバージョンを使う。Volta を入れていれば `package.json` の `volta` で勝手に合う。
+Node.js は `.nvmrc` のバージョンを使う。
+Volta があれば `package.json` の指定に自動で切り替わる。
 
 ```bash
 yarn install --frozen-lockfile
