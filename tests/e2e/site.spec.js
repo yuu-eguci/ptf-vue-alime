@@ -23,9 +23,12 @@ test('存在しないパスを直接開くと 404 にならず /en に戻る', a
 
 for (const { path, title } of pages) {
   test(`${path} が表示される`, async ({ page }) => {
+    const errors = [];
+    page.on('pageerror', (e) => errors.push(e.message));
     await page.goto(`/?p=${path}`);
     await expect(page).toHaveURL(new RegExp(`${path}$`));
     await expect(page.locator('.page-title')).toHaveText(title);
+    expect(errors).toEqual([]);
   });
 }
 
