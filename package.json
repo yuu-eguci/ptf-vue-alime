@@ -2,6 +2,13 @@
   "name": "ptf-vue-alime",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "^24.22.1"
+  },
+  "volta": {
+    "node": "24.22.1",
+    "yarn": "1.22.22"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
