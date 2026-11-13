@@ -72,4 +72,9 @@ yarn i18n:report
 
 ## デプロイ
 
-`master` に push すると GitHub Actions がビルドして `gh-pages` ブランチへデプロイする。
+`master` に push すると GitHub Actions (`.github/workflows/nodejs.yml`) がビルドして、`dist/` を GitHub Pages へデプロイする。
+公式の `actions/configure-pages` / `actions/upload-pages-artifact` / `actions/deploy-pages` を使うので、トークン (PAT) は要らない。
+
+- Pages の設定: Source は「GitHub Actions」。カスタムドメイン (`ptf-test.hitoren.net`) と HTTPS の強制も Pages の設定で持つ (`CNAME` ファイルは使わない)
+- 権限: `contents: read` / `pages: write` / `id-token: write` だけ。デプロイ先は `github-pages` environment
+- リロード時の 404 対策は `public/404.html` (`dist/404.html` としてそのまま出る)
