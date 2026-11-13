@@ -3,18 +3,22 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
   name: 'LoadExternalScript',
 
-  props: ['url'],
+  props: {
+    url: { type: String, required: true },
+  },
 
   mounted () {
     const script = document.createElement('script');
     script.setAttribute('src', this.url);
-    document.getElementById('load-external-script').append(script);
+    this.$el.append(script);
     },
-}
+})
 </script>
 
 <style>

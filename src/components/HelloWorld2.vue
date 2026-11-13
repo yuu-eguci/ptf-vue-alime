@@ -3,7 +3,7 @@
     <h1>{{ $t('message') }}</h1>
     <p>
       222222222222222222222222222222
-      <router-link :to="`/${this.$i18n.locale}`">GO TO 1</router-link>
+      <router-link :to="`/${$i18n.locale}`">GO TO 1</router-link>
     </p>
     <h3>Installed CLI Plugins</h3>
     <ul>
@@ -29,13 +29,15 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
   name: 'HelloWorld',
   props: {
     msg: String
   }
-}
+})
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
