@@ -24,6 +24,9 @@ jobs:
     - name: Lint
       run: yarn lint --no-fix
 
+    - name: Type check
+      run: yarn type-check
+
     - name: Build
       run: yarn build
 

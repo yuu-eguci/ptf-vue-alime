@@ -45,15 +45,15 @@
                 <!-- Nav Start -->
                 <div class="classynav">
                   <ul id="nav">
-                    <li><a :href="`/${this.$i18n.locale}/index`">Home</a></li>
+                    <li><a :href="`/${$i18n.locale}/index`">Home</a></li>
                     <li><a href="#">Pages</a>
                       <ul class="dropdown">
-                        <li><a :href="`/${this.$i18n.locale}/index`">- Home</a></li>
-                        <li><a :href="`/${this.$i18n.locale}/about`">- About</a></li>
-                        <li><a :href="`/${this.$i18n.locale}/gallery`">- Gallery</a></li>
-                        <li><a :href="`/${this.$i18n.locale}/blog`">- Blog</a></li>
-                        <li><a :href="`/${this.$i18n.locale}/single-blog`">- Blog Details</a></li>
-                        <li><a :href="`/${this.$i18n.locale}/contact`">- Contact</a></li>
+                        <li><a :href="`/${$i18n.locale}/index`">- Home</a></li>
+                        <li><a :href="`/${$i18n.locale}/about`">- About</a></li>
+                        <li><a :href="`/${$i18n.locale}/gallery`">- Gallery</a></li>
+                        <li><a :href="`/${$i18n.locale}/blog`">- Blog</a></li>
+                        <li><a :href="`/${$i18n.locale}/single-blog`">- Blog Details</a></li>
+                        <li><a :href="`/${$i18n.locale}/contact`">- Contact</a></li>
                         <li><a href="#">- Dropdown</a>
                           <ul class="dropdown">
                             <li><a href="#">- Dropdown Item</a></li>
@@ -64,10 +64,10 @@
                         </li>
                       </ul>
                     </li>
-                    <li><a :href="`/${this.$i18n.locale}/about`">About</a></li>
-                    <li class="active"><a :href="`/${this.$i18n.locale}/gallery`">Gallery</a></li>
-                    <li><a :href="`/${this.$i18n.locale}/blog`">Blog</a></li>
-                    <li><a :href="`/${this.$i18n.locale}/contact`">Contact</a></li>
+                    <li><a :href="`/${$i18n.locale}/about`">About</a></li>
+                    <li class="active"><a :href="`/${$i18n.locale}/gallery`">Gallery</a></li>
+                    <li><a :href="`/${$i18n.locale}/blog`">Blog</a></li>
+                    <li><a :href="`/${$i18n.locale}/contact`">Contact</a></li>
                   </ul>
 
                   <!-- Search Icon -->
@@ -364,16 +364,17 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue';
 import LoadExternalScript from '@/LoadExternalScript.vue';
 
-export default {
+export default Vue.extend({
   name: 'AlimeGallery',
 
   components: {
     LoadExternalScript
   },
-}
+})
 </script>
 
 <style scoped>

@@ -1,10 +1,10 @@
 import Vue from 'vue';
-import Router from 'vue-router';
+import Router, { RouteConfig } from 'vue-router';
 import i18n from './i18n';
 
 Vue.use(Router);
 
-const routes = [
+const routes: RouteConfig[] = [
   {
     // NOTE: App.vue <router-view /> の中身がこの route になります。
     //       この route の component を App.vue にすると、 App.vue の中で App.vue が描画されることになります。
