@@ -57,8 +57,7 @@
     "overrides": [
       {
         "files": [
-          "*.js",
-          "tests/**/*.js"
+          "*.js"
         ],
         "rules": {
           "@typescript-eslint/no-var-requires": "off"

@@ -2,7 +2,7 @@ ptf-vue-alime
 ===
 
 ポートフォリオサイト用に、無料テンプレート [Alime](https://colorlib.com/wp/template/alime/) を Vue 2 (Vue CLI) へ移植したやつ。
-`src/` は TypeScript で書いていて、`.vue` の template まで型チェックする。
+`src/` は TypeScript で書いていて、`.vue` の template の式 (`$t` / `$i18n` など) まで型チェックする。
 GitHub Pages で公開していて、URL の先頭 (`/en/...`) で言語を切り替える。
 
 - Docker: 対応!
@@ -21,7 +21,7 @@ GitHub Pages で公開していて、URL の先頭 (`/en/...`) で言語を切�
 | Vue | 2.6.12 |
 | Vue CLI | 4.5 (webpack 4.47.0) |
 | TypeScript | 4.9.5 (`src/`。`public/alime` の JS は配布物そのままなので対象外) |
-| vue-tsc | 1.8.27 (`.vue` の template / script も型チェック) |
+| vue-tsc | 1.8.27 (`.vue` の template の式と script も型チェック。Vue 2.6 なので子コンポーネントに渡す props は見ない) |
 | ESLint | 6.8.0 (`plugin:vue/essential` + `@vue/typescript/recommended`) |
 | jQuery (public/alime) | 3.7.1 |
 | Bootstrap (public/alime) | 4.6.2 |
@@ -57,7 +57,7 @@ yarn build
 # lint
 yarn lint
 
-# 型チェック (.vue の template も見る。yarn build / yarn serve でも script 部分はチェックされる)
+# 型チェック (.vue の template の式も見る。yarn build / yarn serve でも script 部分はチェックされる)
 yarn type-check
 
 # E2E テスト (先に yarn build。dist/ を GitHub Pages っぽく配信して desktop / mobile で確認する)
