@@ -2,10 +2,12 @@ ptf-vue-alime
 ===
 
 ポートフォリオサイト用に、無料テンプレート [Alime](https://colorlib.com/wp/template/alime/) を Vue 2 (Vue CLI) へ移植したやつ。
+`src/` は TypeScript で書いていて、`.vue` の template まで型チェックする。
 GitHub Pages で公開していて、URL の先頭 (`/en/...`) で言語を切り替える。
 
 - Docker: 対応!
 - Node.js: 24.22.1 (LTS)
+- TypeScript: 4.9.5 (型チェックは vue-tsc)
 - Linter: ESLint 6.8.0
 - Test: Playwright 1.64.1
 - Vue: 2.6.12 / Vue CLI 4.5
@@ -18,7 +20,9 @@ GitHub Pages で公開していて、URL の先頭 (`/en/...`) で言語を切�
 | Yarn | 1.22.22 |
 | Vue | 2.6.12 |
 | Vue CLI | 4.5 (webpack 4.47.0) |
-| ESLint | 6.8.0 (`plugin:vue/essential`) |
+| TypeScript | 4.9.5 (`src/`。`public/alime` の JS は配布物そのままなので対象外) |
+| vue-tsc | 1.8.27 (`.vue` の template / script も型チェック) |
+| ESLint | 6.8.0 (`plugin:vue/essential` + `@vue/typescript/recommended`) |
 | jQuery (public/alime) | 3.7.1 |
 | Bootstrap (public/alime) | 4.6.2 |
 | Playwright | 1.64.1 (E2E, desktop / mobile) |
@@ -52,6 +56,9 @@ yarn build
 
 # lint
 yarn lint
+
+# 型チェック (.vue の template も見る。yarn build / yarn serve でも script 部分はチェックされる)
+yarn type-check
 
 # E2E テスト (先に yarn build。dist/ を GitHub Pages っぽく配信して desktop / mobile で確認する)
 yarn playwright install chromium
